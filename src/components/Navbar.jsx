@@ -5,19 +5,18 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   const navItems = [
-    { label: 'Products', href: '#features' },
-    { label: 'About', href: '#about' },
-    { label: 'Customers', href: '#customers' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Beranda', href: '#home' },
+    { label: 'Fitur', href: '#features' },
+    { label: 'Kontak', href: '#contact' },
   ]
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-gray-100">
+    <header className="fixed top-0 inset-x-0 z-50 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-gray-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="flex items-center gap-2">
-            <div className="h-9 w-9 rounded-lg bg-black text-white grid place-items-center font-semibold">F</div>
-            <span className="font-semibold tracking-tight text-gray-900">Finwave</span>
+          <a href="#home" className="flex items-center gap-3">
+            <div className="h-9 w-9 rounded-xl bg-gradient-to-tr from-pink-500 via-orange-400 to-yellow-400 text-white grid place-items-center font-semibold shadow-sm">F</div>
+            <span className="font-semibold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-600 via-cyan-500 to-emerald-500">Finwave</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-8 text-sm text-gray-700">
@@ -26,7 +25,11 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
-            <a href="#contact" className="inline-flex items-center rounded-md bg-gray-900 px-4 py-2 text-white hover:bg-black transition-colors">Get Started</a>
+            <a
+              href="#contact"
+              className="inline-flex items-center rounded-md px-4 py-2 text-white bg-gradient-to-r from-violet-600 via-sky-500 to-teal-500 hover:brightness-110 transition-all shadow-sm">
+              Mulai
+            </a>
           </nav>
 
           <button
@@ -45,7 +48,7 @@ export default function Navbar() {
                 {item.label}
               </a>
             ))}
-            <a href="#contact" className="block px-2 py-2 rounded-md bg-gray-900 text-white text-center">Get Started</a>
+            <a href="#contact" className="block px-2 py-2 rounded-md text-center text-white bg-gradient-to-r from-violet-600 via-sky-500 to-teal-500">Mulai</a>
           </div>
         )}
       </div>
